@@ -12,8 +12,7 @@ var move = key_right - key_left;
 hsp = move * walksp;
 
 vsp = vsp + grv;
-x = x +hsp;
-y = y +vsp;
+
 
 //jumping
 
@@ -34,7 +33,7 @@ if (place_meeting(x,y+vsp,oWall))
 	}
 	vsp = 0;
 }
-
+y = y + vsp;
 
 
 //horizontal collision
@@ -47,3 +46,4 @@ if (place_meeting(x+hsp,y,oWall))
 	}
 	hsp = 0;
 }
+x = x + hsp;
